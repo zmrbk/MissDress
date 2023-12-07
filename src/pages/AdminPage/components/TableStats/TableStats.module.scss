@@ -1,0 +1,58 @@
+@import "src/styles/vars";
+
+.table {
+  background: none !important;
+  box-shadow: none !important;
+
+  .tableCell,
+  .tableCellHeader {
+    font-family: inherit !important;
+    border-bottom: none !important;
+  }
+  .tableCell {
+    font-weight: 300;
+  }
+  .tableRow {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  :global(.MuiTableRow-root td:first-child) {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  :global(.MuiTableRow-root td:last-child) {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .tableRow:hover {
+    background-color: $input-beige;
+  }
+  .tableCellName {
+    font-weight: 500;
+  }
+
+  .status {
+    padding: 8px;
+    border-radius: 15px;
+    &.Active,
+    &.Pending,
+    &.Banned,
+    &.Deleted {
+      color: $black-text;
+      font-weight: 400;
+    }
+    &.Active {
+      background-color: $admin-approved;
+    }
+    &.Pending {
+      background-color: $admin-pending;
+    }
+    &.Banned {
+      background-color: $admin-banned;
+    }
+    &.Deleted {
+      background-color: $admin-deleted;
+    }
+  }
+}

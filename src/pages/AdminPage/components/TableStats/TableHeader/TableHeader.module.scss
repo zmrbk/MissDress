@@ -1,0 +1,19 @@
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    span {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+  }
+  .navs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

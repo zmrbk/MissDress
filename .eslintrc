@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "react-app",
+    "react-app/jest",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "require-jsdoc": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "off",
+    "no-console": "warn",
+    "prefer-const": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+@import "src/styles/vars";
+.sideBarWrapper {
+  height: 100vh;
+  flex: 1;
+  min-width: 220px;
+  .sideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $beige-background;
+    padding: 5px 10px 10px 10px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .top {
+      height: 100px;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      i {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .center {
+      width: 100%;
+      margin-bottom: auto;
+    }
+
+    .bottom {
+      align-self: flex-start;
+      width: 100%;
+      .exitButton {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        background-color: $input-beige;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 1em;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        width: 100%;
+        padding: 12px 20px;
+
+        i {
+          width: 24px;
+          height: 24px;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

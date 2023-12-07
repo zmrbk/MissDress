@@ -1,0 +1,28 @@
+.successOrder {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .successOrderTitle {
+    font-size: 1.4em;
+  }
+  .successOrderText {
+    font-size: 1.2em;
+  }
+  .successOrderText,
+  .successOrderTitle {
+    font-family: inherit;
+    font-weight: 300;
+  }
+  * {
+    margin-bottom: 15px;
+  }
+}
+
+.buttonBlock {
+  width: 80%;
+  button {
+    color: #eccfb5;
+    margin: 0 auto;
+  }
+}

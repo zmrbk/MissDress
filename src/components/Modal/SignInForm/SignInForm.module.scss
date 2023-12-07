@@ -1,0 +1,116 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.modalForm {
+  width: 85%;
+  margin: 0 auto;
+
+  .modalError {
+    text-align: center;
+    span {
+      color: red;
+    }
+  }
+
+  .modalButton {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+
+    & .modalButtonSignIn {
+      font-family: inherit;
+      background: none;
+      text-align: center;
+      color: #8d4f21;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 12px;
+      margin-bottom: 15px;
+    }
+  }
+  .modalTitle {
+    margin-left: 20px;
+    font-weight: 400;
+    margin-bottom: 1em;
+
+    @include sm {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+  .modalFields {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .inputBlock {
+      width: 90%;
+      margin-bottom: 15px;
+      input {
+        width: 100%;
+      }
+    }
+
+    .modalCheckBox {
+      width: 100%;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      label {
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        span {
+          font-size: 14px;
+        }
+      }
+      input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+      }
+
+      label:before {
+        content: "";
+        position: relative;
+        -webkit-appearance: none;
+        background: #dbb593;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+          inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      input:checked + label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 8px;
+        width: 6px;
+        height: 14px;
+        border: solid #000000;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include sm {
+          left: 15px;
+        }
+        @include xsm-2 {
+          left: 37px;
+        }
+        @include xsm {
+          left: 20px;
+        }
+      }
+    }
+  }
+}

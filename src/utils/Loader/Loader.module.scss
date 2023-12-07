@@ -1,0 +1,14 @@
+@import "../../styles/vars.scss";
+
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  background-color: transparent;
+
+  &.center {
+    padding-top: 20%;
+    min-height: 70vh !important;
+    background-color: $beige-background;
+  }
+}

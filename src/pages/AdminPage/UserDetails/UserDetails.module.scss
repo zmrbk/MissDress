@@ -1,0 +1,52 @@
+@import "src/styles/vars";
+
+.userDetails {
+  display: flex;
+  background-color: $admin-background;
+
+  .userDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 100px;
+    flex: 6;
+
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 50px;
+      .headerProfile {
+        height: 100%;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        flex: 2;
+      }
+    }
+
+    .userDetailsContent {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      .infoBlock {
+        max-width: 500px;
+
+        .infoTitle {
+          margin-bottom: 50px;
+        }
+        .listOfInfo {
+          li {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

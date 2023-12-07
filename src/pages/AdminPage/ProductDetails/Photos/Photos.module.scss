@@ -1,0 +1,64 @@
+.photos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .images {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    //justify-content: space-between;
+    width: 100%;
+
+    .image {
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .imagePlug {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.8s linear;
+      input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 4;
+      }
+      &::after {
+        display: inline-block;
+        opacity: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.8s linear;
+      }
+      &::before {
+        content: "Нет фото";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .editPhotos {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+  background-color: $beige-background;
+}
+.contactsWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 350px 35px;
+  gap: 273px;
+
+  @include md {
+    height: auto;
+  }
+  .contactsTitle {
+    font-size: 2em;
+    padding: 90px 0px 40px;
+  }
+  .workingHours {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+}
+.contactsFlex {
+  display: flex;
+  flex-direction: column;
+}
+.phoneNumber {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .contactsWrapper {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .contactsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .contactsWrapper {
+    padding: 150px 30px;
+  }
+}

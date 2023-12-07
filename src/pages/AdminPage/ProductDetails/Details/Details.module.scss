@@ -1,0 +1,26 @@
+.details {
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    h4 {
+      font-size: 1.7em;
+    }
+    span {
+      font-size: 1.1em;
+    }
+  }
+  .info {
+    display: flex;
+    align-items: flex-end;
+    gap: 300px;
+    .list {
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

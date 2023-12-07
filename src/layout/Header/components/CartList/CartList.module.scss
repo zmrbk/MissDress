@@ -1,0 +1,22 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.headerCartList {
+  position: absolute;
+  width: 500px;
+  top: 45px;
+  right: -60px;
+  background-color: $secondary-beige;
+  border-radius: 0 0 28px 28px;
+  @include xsm-2 {
+    width: 100vw;
+  }
+  @include xsm {
+    right: -45px;
+  }
+}
+
+.headerCartListBtn {
+  background-color: $primary-beige;
+  border-radius: 0 0 28px 28px;
+}

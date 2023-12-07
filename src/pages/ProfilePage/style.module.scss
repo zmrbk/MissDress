@@ -1,0 +1,81 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.mainDiv {
+  background-color: $beige-background;
+  width: 100%;
+}
+
+.mainContainer {
+  width: 100%;
+  max-height: 2000px;
+  display: flex;
+  padding-bottom: 100px;
+}
+
+.logoGrid {
+  position: relative;
+  margin-top: 25px !important;
+
+  & .logoIcon {
+    position: absolute;
+    top: -80px;
+    right: 140px;
+
+    @include lg {
+      right: 110px;
+    }
+  }
+}
+
+.selectDiv {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.selectDiv a {
+  color: #372e24;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .logoIcon {
+    display: none;
+  }
+
+  .logoIconResp {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+  }
+
+  .logoGrid {
+    position: relative;
+  }
+}
+
+@media (min-width: 900px) {
+  .logoIconResp {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoIconResp {
+    position: absolute;
+    top: 75%;
+    left: 37%;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoIconResp {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+  }
+}

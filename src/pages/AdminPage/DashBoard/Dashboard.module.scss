@@ -1,0 +1,61 @@
+@import "src/styles/vars";
+
+.dashboard {
+  display: flex;
+  background-color: $admin-background;
+
+  .dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 100px;
+    flex: 6;
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .headerProfile {
+        margin-left: auto;
+      }
+    }
+
+    .dashboardContent {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 50px;
+      .left {
+        flex: 7;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        .widgetsContainer {
+          width: 100%;
+          .widgetsTitle {
+            align-self: flex-start;
+            margin-bottom: 15px;
+          }
+          .widgets {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+
+        .tableContainer {
+          width: 100%;
+        }
+      }
+      .right {
+        flex: 4;
+
+        .popularProducts {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

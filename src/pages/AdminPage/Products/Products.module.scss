@@ -1,0 +1,59 @@
+@import "src/styles/vars";
+
+.products {
+  display: flex;
+  background-color: $admin-background;
+
+  .productsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    padding: 20px 30px;
+    gap: 50px;
+    flex: 6;
+
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      flex: 2;
+      .headerProfile {
+        margin-left: auto;
+        height: 100%;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        flex: 2;
+      }
+    }
+
+    .productsContent {
+      flex: 4;
+      width: 100%;
+
+      gap: 50px;
+
+      .productsContentStats {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        gap: 100px;
+        margin-bottom: 60px;
+        .widgets {
+          flex: 2;
+        }
+        .popularUsers {
+          flex: 3;
+        }
+      }
+      .collections {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "src/styles/vars";
+
+.productDetails {
+  display: flex;
+  background-color: $admin-background;
+
+  .productDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 100px;
+    flex: 6;
+
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 50px;
+      .headerProfile {
+        height: 100%;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        flex: 2;
+      }
+    }
+
+    .productDetailsContent {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      .infoBlock {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        gap: 100px;
+        .left {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          flex: 4;
+        }
+        .right {
+          flex: 3;
+        }
+      }
+    }
+  }
+}

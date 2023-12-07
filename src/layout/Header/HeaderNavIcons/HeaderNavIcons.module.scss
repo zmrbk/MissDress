@@ -1,0 +1,77 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.headerNavIcons {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  .headerSearch i,
+  .headerFav i,
+  .headerAcc i,
+  .headerLogin i,
+  .headerCart i {
+    cursor: pointer;
+  }
+  .headerSearch,
+  .headerFav,
+  .headerAcc,
+  .headerLogin,
+  .headerCart {
+    position: relative;
+  }
+  .icon svg path {
+    transition: all 0.3s linear;
+  }
+  .icon:hover svg path,
+  .icon:active svg path,
+  .icon:focus svg path {
+    fill: $hover-green;
+  }
+
+  .headerCartDrop {
+    width: 300px;
+    position: absolute;
+    top: 45px;
+    right: -60px;
+    background-color: $secondary-beige;
+  }
+
+  .counter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 14px;
+    cursor: pointer;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: #dbb593;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.3s linear;
+  }
+
+  .icon:hover .counter {
+    @include hover {
+      background-color: $hover-green;
+      color: white;
+    }
+  }
+  .icon:active,
+  .icon:focus .counter {
+    fill: black;
+    color: white;
+  }
+}
+
+.headerNavIcons:hover i *svg {
+  fill: darkgreen;
+}

@@ -1,0 +1,89 @@
+@import "../../../../styles/vars.scss";
+
+.image {
+  background-color: $beige-background;
+  &__flex {
+    background: url(../../../../assets/Main/Subscrube/sub.jpg);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1150px;
+    margin: 0px auto;
+    height: 750px;
+  }
+
+  .inputBlock {
+    margin-bottom: 20px;
+  }
+
+  .error {
+    span {
+      color: $error-text;
+    }
+  }
+
+  &__h3 {
+    font-weight: 600;
+    font-size: 20.8px;
+    line-height: 44px;
+    color: #f1dac5;
+    text-align: center;
+  }
+}
+
+.block {
+  position: relative;
+  margin: 200px 50px;
+  height: 368px;
+  z-index: 3;
+}
+
+.btn__fix {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .image__flex {
+    padding: 35px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image__flex {
+    justify-content: center;
+  }
+
+  .block {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .image__flex {
+    padding: 0;
+    display: flex;
+  }
+
+  .block {
+    font-weight: 600;
+    font-size: 15.8px;
+    line-height: 44px;
+    color: #f1dac5;
+    height: 230px;
+  }
+
+  .error {
+    height: 30px;
+  }
+
+  .inputBlock {
+    width: 220px;
+    div {
+      height: 26px;
+    }
+  }
+}

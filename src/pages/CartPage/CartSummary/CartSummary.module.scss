@@ -1,0 +1,25 @@
+@import "src/styles/vars";
+
+.cartSummary {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: $secondary-beige;
+  .cartSummaryInfo {
+    margin: 15px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

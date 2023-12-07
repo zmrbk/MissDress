@@ -1,0 +1,245 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.main_container {
+  height: 100%;
+  background-color: $background-color;
+  padding: 8% 6%;
+
+  .container {
+    h3 {
+      display: none;
+    }
+
+    .orderId {
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding-right: 5%;
+    }
+
+    hr {
+      margin-top: 2%;
+    }
+
+    article {
+      .grid {
+        padding-left: 1%;
+
+        .newPrice {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+
+        .oldPrice {
+          text-decoration: line-through;
+        }
+
+        .description {
+          line-height: 1.7rem;
+          p {
+            font-weight: lighter;
+            font-size: 0.9rem;
+
+            span {
+              font-weight: 500;
+            }
+          }
+
+          .title {
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .lineThrough {
+        margin: 3% 0;
+      }
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .orderInfo {
+      margin-top: 2%;
+      line-height: 2rem;
+
+      .questions {
+        p {
+          font-size: 1.1rem;
+          font-weight: 550;
+        }
+      }
+
+      .answers {
+        p {
+          font-size: 1.1rem;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .main_container {
+    padding: 12% 6%;
+  }
+}
+
+@include md {
+  .main_container {
+    padding: 15% 6%;
+
+    .container {
+      .orderId {
+        font-size: 1.2rem;
+      }
+
+      .status {
+        font-size: 1rem;
+      }
+
+      article {
+        .grid {
+          .newPrice {
+            font-size: 1.3rem;
+          }
+          .oldPrice {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .main_container {
+    padding: 18% 6%;
+
+    .container {
+      .orderId {
+        font-size: 1rem;
+      }
+
+      .status {
+        font-size: 0.8rem;
+      }
+
+      article {
+        .grid {
+          margin-top: 0.5%;
+
+          .img {
+            width: 95%;
+          }
+
+          .newPrice {
+            font-size: 1.1rem;
+          }
+
+          .oldPrice {
+            font-size: 0.8rem;
+          }
+
+          .description {
+            line-height: 1.2rem;
+            p {
+              font-size: 0.7rem;
+            }
+
+            .title {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+
+      .orderInfo {
+        .questions {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+
+        .answers {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main_container {
+    padding: 20% 6%;
+
+    .container {
+      .orderId {
+        font-size: 0.9rem;
+      }
+
+      .status {
+        font-size: 0.8rem;
+      }
+
+      h3 {
+        display: block;
+        text-align: center;
+        margin-bottom: 5%;
+      }
+
+      article {
+        .grid {
+          margin-top: 2%;
+
+          .img {
+            width: 95%;
+          }
+
+          .lineThrough {
+            visibility: hidden;
+          }
+
+          .newPrice {
+            font-size: 0.9rem;
+          }
+
+          .oldPrice {
+            font-size: 0.8rem;
+          }
+
+          .description {
+            line-height: 1rem;
+            p {
+              font-size: 0.6rem;
+            }
+
+            .title {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+
+      .orderInfo {
+        line-height: 1.6rem;
+        .questions {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+
+        .answers {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

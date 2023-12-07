@@ -1,0 +1,27 @@
+@import "src/styles/mixins";
+
+.orderCheck {
+  .orderCheckTitle {
+    margin-bottom: 15px;
+  }
+  .orderCheckInfo {
+    font-family: inherit;
+    font-style: inherit;
+    margin-bottom: 15px;
+
+    span:first-child {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  }
+  .orderCheckEditBtn {
+    width: 200px;
+    @include md {
+      width: 100%;
+    }
+  }
+
+  @include md {
+    text-align: start;
+  }
+}

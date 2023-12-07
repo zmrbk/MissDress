@@ -1,0 +1,206 @@
+.btn {
+    width: 60%;
+    border-radius: 25px;
+    height: 13%;
+    border: none;
+    position: absolute;
+    left: 20%;
+    top: 75%;
+    cursor: pointer;
+    opacity: 0;
+    color: #f1dac5;
+    transition: all 0.2s linear;
+  
+    &:hover {
+      background-color: #f1dac5 !important;
+      color: #372e24 !important;
+    }
+  }
+  
+  .categoryImg {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .btnDiv {
+    position: relative;
+    width: 100%;
+  }
+  .btnDiv::before {
+    opacity: 0;
+  }
+  .btnDiv:hover::before {
+    opacity: 1;
+  }
+  .btnDiv:hover .btn {
+    opacity: 1;
+    background: #372e24;
+    transition: all 0.2s linear;
+  }
+  
+  .categoryDiv {
+    display: flex !important;
+    text-align: center;
+  }
+  .categoryDiv div h4 {
+    color: #372e24;
+  }
+  .mainDiv {
+    background: #f1dac5;
+    width: 100%;
+    height: auto;
+  }
+  .mainDiv h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #372e24;
+  }
+  
+  .btnDiv h4 {
+    font-size: 24px;
+  }
+  
+  .priceDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+  }
+  .priceDiv p {
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  .priceP {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+  }
+  .priceP p:nth-child(1) {
+    text-decoration: line-through;
+  }
+  .colorDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+  .bestsellerCard {
+    width: 100%;
+  }
+  .titleP {
+    font-size: 24px;
+    font-weight: lighter;
+    max-height: 100%;
+    height: 60px;
+    margin-top: 0;
+  }
+  
+  .sizeP {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  .iconsDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .iconsDiv img {
+    cursor: pointer;
+    width: 33px;
+  }
+  .startsDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .btnAll {
+    display: block;
+    margin: 0 auto;
+    background-color: #372e24;
+    color: #f1dac5;
+    border-radius: 45px;
+    width: 323px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+  }
+  .mainBestseller {
+    margin-bottom: 50px;
+  }
+  .startsDiv label span svg path {
+    width: 150px !important;
+    fill: #372e24;
+  }
+  .startsDiv label span svg path {
+    width: 150px !important;
+  }
+  @media (max-width: 1100px) {
+    .iconsDiv img {
+      width: 28px;
+    }
+    .titleP {
+      font-size: 15px;
+    }
+    .priceP p {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 788px) {
+    .priceP p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 715px) {
+    .iconsDiv img {
+      width: 20px;
+    }
+  }
+  
+  @media (max-width: 624px) {
+    .titleP {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 500px) {
+    .iconsDiv img {
+      width: 20px;
+    }
+    .colorDiv img {
+      width: 16px;
+    }
+    .colorDiv p {
+      font-size: 18px;
+    }
+    .priceP p {
+      font-size: 16px;
+    }
+    .priceP p:nth-child(1) {
+      font-size: 12px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .titleP {
+      font-size: 10px;
+    }
+    .sizeP {
+      font-size: 16px;
+    }
+    .btnAll {
+      width: 220px;
+      height: 36px;
+    }
+    .btnDiv h4 {
+      font-size: 15px;
+      color: #372e24;
+      font-weight: lighter;
+    }
+  }
+  
+  @media (max-width: 392px) {
+    .iconsDiv img {
+      width: 16px;
+    }
+    .titleP {
+      font-size: 10px;
+    }
+  }
+  

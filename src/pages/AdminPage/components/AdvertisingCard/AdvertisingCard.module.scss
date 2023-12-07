@@ -1,0 +1,60 @@
+.advertisingCard {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    .advertisingCardName {
+      font-size: 1em;
+      font-weight: 500;
+      white-space: pre-line;
+      word-wrap: break-word;
+    }
+    .startAdBtn {
+      width: auto;
+    }
+  }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    margin-bottom: 5px;
+
+    &::after {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: all 0.5s linear;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  .editBanner {
+    align-self: flex-end;
+  }
+}

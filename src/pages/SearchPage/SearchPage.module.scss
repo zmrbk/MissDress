@@ -1,0 +1,15 @@
+@import "src/index";
+@import "src/styles/vars";
+
+.searchPageWrapper {
+  padding-top: 70px;
+  background-color: $beige-background;
+  .searchPageContainer {
+    padding: 20px;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,38 @@
+.block__all {
+  display: flex;
+  justify-content: center;
+}
+
+.collection {
+  width: 1150px;
+  background: rgb(255, 255, 255);
+
+  &__flex {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+  &__h3 {
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 4.875rem;
+    color: #372e24;
+  }
+}
+.block {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  &__dav {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+}
+.reverse {
+  flex-direction: row-reverse;
+}

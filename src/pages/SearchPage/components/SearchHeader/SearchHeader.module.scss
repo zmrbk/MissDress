@@ -1,0 +1,42 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.searchPageHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 45px;
+  margin-bottom: 35px;
+
+  .searchPageHeaderLeft {
+    .searchPageTitle {
+      font-size: 1.7em;
+      color: $black-text;
+      margin-bottom: 30px;
+
+      @include xsm-2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
+
+      @include xsm {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+    }
+
+    .searchPageHeaderQuantity {
+      font-size: 1.2em;
+      color: $black-text;
+
+      @include xsm-2 {
+        font-size: 1em;
+      }
+
+      @include xsm {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

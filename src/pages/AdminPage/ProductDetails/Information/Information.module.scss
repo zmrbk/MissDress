@@ -1,0 +1,20 @@
+.info {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    h4 {
+      font-size: 1.3em;
+    }
+  }
+
+  .deleteBtn {
+    align-self: flex-end;
+  }
+}

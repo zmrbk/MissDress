@@ -1,0 +1,19 @@
+@import "src/index";
+
+.collectionDiv {
+  margin: 0 auto;
+  padding: 4%;
+}
+.mainCollections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.collection {
+  width: 30%;
+}
+
+.image {
+  width: 650px;
+}

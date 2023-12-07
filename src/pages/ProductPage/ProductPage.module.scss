@@ -1,0 +1,494 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+// Product Page Main -- main Product Container
+.background_container {
+  color: $black-text;
+  background-color: $beige-background;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .product_container {
+    margin: 5% auto;
+    .btnBottom {
+      visibility: hidden;
+      margin-bottom: 40%;
+    }
+    .btnMobileDiv {
+      display: none;
+    }
+    .description_change_mobile {
+      display: none;
+    }
+
+    //Description
+    .text_dress {
+      line-height: 2.3rem;
+
+      .like_flex {
+        display: flex;
+        p {
+          margin-right: 14%;
+        }
+        .likeIcon {
+          margin-bottom: 11px;
+          width: 5%;
+          cursor: pointer;
+        }
+      }
+
+      .description_change {
+        display: block;
+
+        p {
+          line-height: 1.6rem;
+          margin-bottom: 3%;
+        }
+        h4 {
+          font-size: 1.1rem;
+        }
+      }
+
+      .colors {
+        display: flex;
+        .color {
+          display: flex;
+          .each_color {
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            margin: 6px;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      h4 {
+        font-size: 1.3rem;
+      }
+
+      .title {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .prices {
+        font-size: 1.6rem;
+        span {
+          text-decoration: line-through;
+          padding-left: 12px;
+          font-size: 20px;
+          font-weight: 200;
+        }
+      }
+
+      .btn {
+        width: 60%;
+        height: 50px;
+        background-color: $black-text;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-family: "Montserrat";
+        font-size: 1rem;
+        cursor: pointer;
+
+        &__delete {
+          background-color: $error-text !important;
+        }
+      }
+
+      .description {
+        width: 90%;
+        line-height: 30px;
+
+        &_flex {
+          width: 75%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    //Similar Products
+    .similar_container {
+      position: relative;
+      padding-top: 4%;
+      width: 90%;
+      margin: 0 auto;
+      h1 {
+        padding-bottom: 4%;
+      }
+
+      .similar_swiper_left {
+        position: absolute;
+        width: 100px;
+        left: -50px;
+        bottom: 0;
+      }
+      .similar_swiper_right {
+        width: 100px;
+        margin-left: 99%;
+        margin-top: -35%;
+      }
+    }
+  }
+  // --------------900 PX --------------------
+
+  @media only screen and (max-width: 900px) {
+    .product_container {
+      width: 90%;
+      .description_change_mobile {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+
+        .btn {
+          width: 50%;
+          height: 50px;
+          background-color: #372e24;
+          border: none;
+          border-radius: 30px;
+          color: white;
+          font-family: "Montserrat";
+          font-size: 1rem;
+          margin: 5% 25%;
+          text-align: center;
+        }
+        h4 {
+          margin: 5% 0;
+          font-size: 1.3rem;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      .text_dress {
+        line-height: 2.5rem;
+        margin-top: 30%;
+
+        .description_change {
+          display: none;
+        }
+
+        .title {
+          font-size: 1.3rem;
+          margin-bottom: 5%;
+        }
+        .prices {
+          font-size: 1.3rem;
+          span {
+            font-size: 1rem;
+          }
+        }
+        .description {
+          &_flex {
+            width: 75%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  // --------------750 PX --------------------
+  @media only screen and (max-width: 750px) {
+    .product_container {
+      .btnBottom {
+        margin-bottom: 45%;
+      }
+      .text_dress {
+        .each_color {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          margin: 3px;
+        }
+      }
+      .similar_container {
+        .similar_swiper_right {
+          margin-top: -55%;
+        }
+      }
+      .btnMobileDiv {
+        padding-top: 20%;
+      }
+    }
+  }
+
+  // --------------600 PX --------------------
+  @media only screen and (max-width: 600px) {
+    .product_container {
+      .btnBottom {
+        visibility: hidden;
+        margin-bottom: 0;
+      }
+      .btnMobileDiv {
+        display: block;
+      }
+      .btnMobile {
+        margin: 30% 15% 20% 15%;
+        width: 70%;
+        height: 50px;
+        background-color: $black-text;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-family: "Montserrat";
+        font-size: 14px;
+        text-align: center;
+      }
+      .text_dress {
+        line-height: 2.2rem;
+        p {
+          font-size: 0.9rem;
+        }
+        .title {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  // --------------520 PX --------------------
+  @include xsm-2 {
+    .product_container {
+      margin: 0 auto;
+      .description_change_mobile {
+        h4 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        .btn {
+          width: 50%;
+          height: 40px;
+          font-size: 0.7rem;
+        }
+      }
+      .main_dress {
+        padding-top: 15%;
+      }
+      .text_dress {
+        line-height: 2rem;
+        .prices {
+          font-size: 1rem;
+          span {
+            font-size: 0.8rem;
+          }
+        }
+
+        .title {
+          font-size: 0.83rem;
+        }
+        .colors {
+          .color {
+            .each_color {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              margin: 3px;
+            }
+          }
+        }
+        padding-top: 0%;
+
+        p {
+          line-height: 1.5rem;
+          font-size: 11px;
+        }
+        span {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  // --------------380 PX --------------------
+  @include xsm {
+    .product_container {
+      .description_change_mobile {
+        h4 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+      }
+      .text_dress {
+        .prices {
+          font-size: 0.8rem;
+          span {
+            font-size: 0.6rem;
+          }
+        }
+        .colors {
+          .color {
+            .each_color {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              margin: 3px;
+            }
+          }
+        }
+        line-height: 0.9rem;
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+//Grid
+//Swiper Vertical
+.verticalSwiper {
+  margin-top: 20px;
+
+  .iconUp,
+  .iconDown {
+    margin-left: 33%;
+  }
+  .iconLeftMobile,
+  .iconRightMobile {
+    display: none !important;
+  }
+  .swiper {
+    height: 73vh;
+    :global(.swiper) {
+      height: 100vh;
+    }
+
+    :global(.swiper-wrapper) {
+      position: absolute;
+      padding-left: 30%;
+      height: 100vh;
+    }
+    .dress {
+      width: 28%;
+    }
+  }
+}
+
+// ----------\\----------\\-----------\\------
+@media only screen and (max-width: 900px) {
+  .verticalSwiper {
+    margin-top: 0;
+    position: relative;
+
+    .swiper {
+      margin: 10% 0 0 15%;
+      height: 20vh;
+      position: relative;
+
+      :global(.swiper-wrapper) {
+        padding-left: 0;
+      }
+      :global(.swiper) {
+        height: 10vh;
+      }
+      .dress {
+        width: 70%;
+      }
+    }
+
+    .iconUp,
+    .iconDown {
+      display: none !important;
+      margin-left: 0%;
+    }
+    .iconLeftMobile,
+    .iconRightMobile {
+      display: inline-block !important;
+      position: absolute;
+    }
+
+    .iconRightMobile {
+      position: absolute;
+      left: 97%;
+      top: 2%;
+    }
+  }
+}
+
+// -----------------1400 and bigger -------------------------
+@media only screen and (min-width: 1400px) {
+  .background_container {
+    .product_container {
+      width: 1400px;
+      margin: 0 auto;
+
+      //Image mainDress
+      .main_dress {
+        margin-top: 40px;
+      }
+
+      //Description
+      .text_dress {
+        margin-top: 50px;
+
+        .colors {
+          display: flex;
+        }
+
+        .color {
+          display: flex;
+        }
+
+        .each_color {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          margin: 5px;
+        }
+
+        h3,
+        p,
+        h4 {
+          line-height: 30px;
+          padding-bottom: 2%;
+        }
+
+        h4 {
+          font-size: 1.3rem;
+        }
+
+        h3 {
+          font-size: 25px;
+        }
+
+        span {
+          text-decoration: line-through;
+          padding-left: 12px;
+          font-size: 20px;
+        }
+
+        .btn {
+          width: 60%;
+        }
+
+        .description {
+          width: 90%;
+          line-height: 30px;
+
+          &_flex {
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      //Similar Products
+      .similar_container {
+        width: 1300px;
+      }
+    }
+  }
+}

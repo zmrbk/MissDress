@@ -1,0 +1,78 @@
+@import "src/styles/vars";
+@import "src/styles/mixins";
+
+.orderFormWrapper {
+  width: 100%;
+  .orderFormHeader {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    @include md {
+      text-align: center;
+    }
+    .orderFormTitle {
+      font-weight: 600;
+      font-size: 2em;
+      @include md {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .orderForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .orderFormError {
+      span {
+        color: $error-text;
+      }
+    }
+  }
+  .orderFormFlexWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @include md {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .orderFormLeft,
+    .orderFormRight {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1 1;
+      @include md {
+        width: 100%;
+      }
+
+      & select {
+        position: relative;
+        font-size: 1em;
+        width: 100%;
+        font-family: inherit;
+        height: inherit;
+        outline: none;
+        border: none;
+        padding: 20px;
+        border-radius: 50px;
+        background-color: $secondary-beige;
+        color: $input-text;
+
+        @include sm {
+          font-size: 0.9em;
+        }
+        @include xsm-2 {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}

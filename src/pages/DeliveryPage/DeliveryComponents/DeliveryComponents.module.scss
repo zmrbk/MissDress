@@ -1,0 +1,42 @@
+.dilev {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  height: 50px;
+}
+.Link {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 34px;
+  color: #372e24;
+}
+
+.Linkd {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 34px;
+  color: #c6863f;
+}
+
+@media screen and (max-width: 820px) {
+  .dilev {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Link {
+    font-size: 4.5vw;
+  }
+
+  .Linkd {
+    font-size: 4.5vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .dilev {
+    gap: 10px;
+  }
+}

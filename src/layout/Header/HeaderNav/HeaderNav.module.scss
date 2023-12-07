@@ -1,0 +1,68 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.headerNav {
+  @include md {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    background-color: $secondary-beige;
+  }
+}
+.active {
+  display: flex;
+  width: 200px;
+  padding: 10px;
+}
+.headerNavInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  li a {
+    color: $black-text;
+
+    &.link_active {
+      color: black;
+      font-weight: 600;
+    }
+
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: 600;
+      overflow: hidden;
+      visibility: hidden;
+      height: 0;
+    }
+    &:hover {
+      color: black;
+      font-weight: 600;
+    }
+  }
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    li {
+      width: 100%;
+    }
+
+    li:hover {
+      @include hover {
+        background-color: #eccfb5;
+      }
+    }
+
+    li a {
+      display: inline-block;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+}

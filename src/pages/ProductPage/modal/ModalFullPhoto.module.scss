@@ -1,0 +1,19 @@
+@import "../../../styles/mixins.scss";
+
+.modalPhoto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px !important;
+  height: 600px !important;
+  object-fit: contain !important;
+  border: none;
+  outline: none;
+  @include xsm-2 {
+    width: 100% !important;
+    max-height: 600px;
+    height: auto !important;
+    padding: 0px 15px !important;
+  }
+}

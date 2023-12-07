@@ -1,0 +1,22 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.requisitePage {
+  font-family: "Montserrat";
+  background-color: $beige-background;
+  padding: 100px 0px;
+  & .header {
+    text-align: center;
+    margin: 20px 0px 30px;
+    color: $black-text;
+  }
+  & .items {
+    padding: 0px 20px;
+    @include md {
+      padding: 0px 25px;
+    }
+    & .item {
+      margin: 15px 0px;
+    }
+  }
+}

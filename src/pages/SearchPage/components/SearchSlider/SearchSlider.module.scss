@@ -1,0 +1,64 @@
+@import "src/styles/mixins";
+
+.searchSlider {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+:global(.swiper-button-prev),
+:global(.swiper-button-next) {
+  width: 36px !important;
+  height: 36px !important;
+  position: absolute !important;
+  cursor: pointer !important;
+  top: 40%;
+
+  @include sm {
+    display: none;
+  }
+}
+
+:global(.image-slider) {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+:global(.swiper-button-prev) {
+  left: -50px !important;
+  right: auto !important;
+  z-index: 3;
+  @include md {
+    left: -40px !important;
+  }
+}
+
+:global(.swiper-button-next) {
+  right: -50px !important;
+  left: auto !important;
+  z-index: 3;
+  @include md {
+    right: -40px !important;
+  }
+}
+
+:global(.swiper-button-next::after) {
+  content: "" !important;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("../../../../assets/icons/sliderArrow.svg") no-repeat center;
+  background-size: contain;
+}
+
+:global(.swiper-button-prev::after) {
+  content: "" !important;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("../../../../assets/icons/sliderArrow.svg") no-repeat center;
+  background-size: contain;
+  transform: rotate(180deg);
+}

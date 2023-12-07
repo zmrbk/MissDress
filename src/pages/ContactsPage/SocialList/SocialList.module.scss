@@ -1,0 +1,11 @@
+.socialList {
+  .socialListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    span {
+      font-size: 1.2em;
+    }
+  }
+}

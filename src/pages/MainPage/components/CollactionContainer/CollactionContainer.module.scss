@@ -1,0 +1,19 @@
+.coll {
+  text-align: center;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3.6875rem;
+  color: #372e24;
+  margin: 95px 0 95px 0;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+html,
+body {
+  background: #f1dac5a2;
+  overflow-x: hidden;
+}

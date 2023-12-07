@@ -1,0 +1,128 @@
+.image__input {
+  width: 430px;
+  height: 56px;
+  border: none;
+  background: rgba(241, 218, 197, 0.8);
+  border-radius: 45px;
+  font-weight: 300;
+  font-size: 20.8px;
+  line-height: 39px;
+  color: #5f4932;
+  display: flex;
+  margin: 25px 0;
+  padding: 0 25px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image {
+  color: #5f4932;
+  cursor: pointer;
+  display: flex;
+  font-weight: 300;
+  font-size: 20.8px;
+  line-height: 39px;
+  margin: 0px;
+  padding: 10px 30px;
+
+  &__in {
+    width: 430px;
+    height: 248px;
+    z-index: 10;
+    background: rgba(241, 218, 197, 0.8);
+    border-radius: 45px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .image__input {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  .image {
+    width: 46vw;
+    padding: 5px 25px;
+  }
+
+  .image__in {
+    height: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .image {
+      width: 46vw;
+      padding: 5 0px 25px;
+      border-radius: 30px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .image__input {
+      width: 14rem;
+      font-size: 15px;
+      height: 40px;
+      margin: 0;
+    }
+
+    .image__in {
+      width: 220px;
+
+      height: 90px;
+      border-radius: 15px;
+    }
+
+    .image {
+      font-size: 15px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .image__input {
+      width: 220px;
+
+      padding: 15px;
+      height: 20px;
+    }
+
+    .image__in {
+      width: 220px;
+      height: 80px;
+      padding: 0px 20px;
+      border-radius: 15px;
+    }
+
+    .image {
+      padding: 0;
+      font-size: 10px;
+      height: 15px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .image__input {
+      width: 220px;
+      height: 30px;
+      padding: 10px 15px;
+      margin: 0;
+    }
+
+    .image__in {
+      width: 220px;
+      height: 60px;
+
+      border-radius: 10px;
+      padding: 0px 10px;
+    }
+
+    .image {
+      padding: 2px 5px;
+      font-size: 10px;
+      height: 9px;
+    }
+  }
+}
